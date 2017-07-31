@@ -612,7 +612,7 @@ var TimesheetdataComponent = (function () {
         //console.log( this.TimeSheetService.url);
         this.TimeSheetService.data = values;
         this.TimeSheetService.postService().subscribe(function (res) {
-            console.log(res);
+            //console.log(res);
             __WEBPACK_IMPORTED_MODULE_4_sweetalert___default()('Data Saved.');
         });
     };
@@ -2572,7 +2572,7 @@ var BaPageTop = (function () {
             //     element.id = id;
             //     // this.empNames.push({id:id});
             //   });
-            console.log(_this.empNames);
+            //console.log(this.empNames );
         });
     };
     BaPageTop.prototype.empSelected = function (selectedEmp) {
@@ -2592,7 +2592,7 @@ var BaPageTop = (function () {
         this.router.navigate(['']);
     };
     BaPageTop.prototype.startSearch = function () {
-        console.log(this.employeeName);
+        //console.log(this.employeeName);
     };
     return BaPageTop;
 }());

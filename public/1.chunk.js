@@ -655,9 +655,9 @@ var EmployeeRegisterComponent = (function () {
         this.uploader = new __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__["FileUploader"](this.options);
         this.uploader.onAfterAddingFile = function (file) { file.withCredentials = false; };
         this.uploader._onCompleteItem = function (item, response, status, headers) {
-            console.log("oncomplete call");
+            //console.log("oncomplete call")
             // this.uploaded.emit(item.file.size);
-            console.log(item);
+            //console.log(item);
         };
         this.register.url = "users/managers";
         this.register.getService().subscribe(function (res) {
@@ -687,7 +687,7 @@ var EmployeeRegisterComponent = (function () {
     // }
     EmployeeRegisterComponent.prototype.onRegisterSubmit = function (user) {
         var _this = this;
-        console.log(this.uploader);
+        //console.log(this.uploader)
         var upload = this.uploader["queue"][0];
         upload.upload();
         this.uploader._onCompleteItem = function (item, response, status, headers) {

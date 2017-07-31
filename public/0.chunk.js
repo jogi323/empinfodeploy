@@ -472,7 +472,7 @@ var SigninComponent = (function () {
         this.login.postService().subscribe(function (res) {
             //console.log(res);
             var status = res["code"];
-            console.log(status);
+            //console.log(status);
             //console.log(status);
             if (status == 0) {
                 __WEBPACK_IMPORTED_MODULE_3_sweetalert___default()("Inavlaid Credentials!");

@@ -201,7 +201,7 @@ var PayrollComponent = (function () {
     }
     PayrollComponent.prototype.onSelectionChange = function (payroll) {
         //  console.log(payroll);
-        console.log(payroll);
+        //console.log(payroll);
         this.selectedEntry = payroll;
         if (this.selectedEntry == "Weekly")
             this.display(this.data.payYear, "Weekly");
@@ -228,13 +228,13 @@ var PayrollComponent = (function () {
     };
     PayrollComponent.prototype.getData = function (data) {
         var _this = this;
-        console.log(data);
+        //console.log(data);
         // alert("generate payroll");
         this.appser.url = "http://localhost:8000/timesheet/generatePayRoll";
         this.appser.data = data;
         this.appser.postService().subscribe(function (res) {
             // this.sampleData = res;
-            console.log(res);
+            //console.log(res);
             _this.sampleData = (res);
             var hai = _this.sampleData.PayRollArray;
             var statusCode = _this.sampleData.StatusCode;
@@ -255,13 +255,13 @@ var PayrollComponent = (function () {
                 });
             }
             else if (statusCode == "01") {
-                console.log("no data");
+                //console.log("no data");
                 _this.isData = true;
             }
         });
     };
     PayrollComponent.prototype.payroll_year = function (payRollYear) {
-        console.log(payRollYear);
+        //console.log(payRollYear);
         this.data.payYear = payRollYear;
         if (this.selectedEntry == "Weekly")
             this.display(this.data.payYear, "Weekly");
@@ -287,7 +287,7 @@ var PayrollComponent = (function () {
                     this.populate.push({ 'month': this.populatedValues });
                 }
                 this.data.payMonth = this.populate[0]["month"];
-                console.log(this.data.payMonth);
+                //console.log(this.data.payMonth)
             }
             else {
                 this.populate = [];
@@ -319,7 +319,7 @@ var PayrollComponent = (function () {
                     this.date.setDate(0);
                 }
                 this.data.payMonth = this.populate[0]["month"];
-                console.log(this.data.payMonth);
+                //console.log(this.data.payMonth)
                 //this.date1=this.date;
             }
             else {
@@ -365,7 +365,7 @@ var PayrollComponent = (function () {
                     this.date.setDate(0);
                 }
                 this.data.payMonth = this.populate[0]["month"];
-                console.log(this.data.payMonth);
+                //console.log(this.data.payMonth)
             }
             else {
                 this.populate = [];
@@ -440,7 +440,7 @@ var ProfileComponent = (function () {
         this.profileService.getService().subscribe(function (res) {
             // console.log(res); 
             _this.userDetails = res["data"][0];
-            console.log(_this.userDetails);
+            //console.log(this.userDetails);
             _this.image_path = "images/" + _this.userDetails.empImage;
         });
     };
@@ -545,11 +545,11 @@ var CalendarService = (function () {
     //   this.caseNumber.next(Data);
     // }
     CalendarService.prototype.getData = function (data) {
-        console.log(data);
+        //console.log(data);
         var dashboardColors = this._baConfig.get().colors.dashboard;
         var date = new Date(), month = '' + (date.getMonth() + 1), day = '' + date.getDate(), year = date.getFullYear();
         this.finalDate = [year, month, day].join('-');
-        console.log(this.finalDate);
+        //console.log(this.finalDate);
         return {
             header: {
                 left: 'prev,next today',
